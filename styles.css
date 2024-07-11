@@ -1,0 +1,467 @@
+/* Reset and General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #bed8f5, #ecbf92); 
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background: linear-gradient(135deg, #007BFF, #FF6F00);
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo-text {
+    font-size: 1.2em;
+    margin-left: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF6F00;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Hero Section */
+#hero {
+    background: url('./images/pexels-rquiros-2219024.jpg') no-repeat center center/cover;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #FF6F00; /* Orange background for the button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #e65c00; /* Darker orange for hover effect */
+}
+
+/* Main Content Sections */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #FF6F00; /* Orange color for section headings */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(33.333% - 40px); /* 3 columns with some margin */
+    max-width: calc(33.333% - 40px);
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.service h3 {
+    color: #007BFF; /* Blue color for service titles */
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: #666;
+}
+
+/* Add hover effect */
+.service:hover {
+    transform: translateY(-10px); /* Slightly lift the box */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* About Section */
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    max-width: 60%;
+}
+
+.about-text h2 {
+    color: #FF6F00; /* Orange color for section headings */
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.about-image {
+    max-width: 35%;
+    margin-left: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Contact Section */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    max-width: 45%;
+    margin-right: 20px;
+}
+
+.contact-info h3 {
+    color: #FF6F00; /* Orange color for headings */
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    color: #666;
+    line-height: 1.8;
+}
+
+.contact-info ul.social-media {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.contact-info ul.social-media li {
+    margin-right: 10px;
+}
+
+.contact-info ul.social-media li img {
+    height: 30px;
+    width: 30px;
+}
+
+.contact-info ul.social-media li img:hover{
+    background-color: #007BFF;
+}
+
+form {
+    max-width: 45%;
+    flex-grow: 1;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #0056b3; /* Darker blue for form labels */
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #0056b3; /* Darker blue border */
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #FF6F00; /* Orange background for the button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #e65c00; /* Darker orange for hover effect */
+}
+
+#form-message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #FF6F00, #007BFF);
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .services-container .service {
+        flex: 1 1 calc(50% - 40px); /* 2 columns for tablet and small laptops */
+        max-width: calc(50% - 40px);
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 80%;
+        margin: 20px 0 0 0;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, form {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .contact-info {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-container .service {
+        flex: 1 1 calc(100% - 40px); /* 1 column for mobile */
+        max-width: calc(100% - 40px);
+    }
+
+    .hero-content h1{
+        font-size: 3rem;
+    }
+
+    .hero-content p{
+        font-size: 1.5rem;
+    }
+
+    .about-content {
+        padding: 10px;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+
+    .about-text p {
+        margin-bottom: 15px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, form {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .contact-info {
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust according to your nav height */
+        right: 20px;
+        background: #007BFF; /* Same as nav background */
+        width: 200px;
+        border-radius: 8px;
+        z-index: 999;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: right;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
